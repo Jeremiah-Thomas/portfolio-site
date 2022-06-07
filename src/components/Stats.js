@@ -19,19 +19,19 @@ export class Stats extends Component {
           <div className="stat-num">4 Months</div>
         </section>
         <section className="stat-section">
-          <h1></h1>
+          <h1>Temp</h1>
           <div className="stat-num"></div>
         </section>
         <section className="stat-section">
-          <h1></h1>
+          <h1>Temp</h1>
           <div className="stat-num"></div>
         </section>
         <section className="stat-section">
-          <h1></h1>
+          <h1>Temp</h1>
           <div className="stat-num"></div>
         </section>
         <section className="stat-section">
-          <h1></h1>
+          <h1>Temp</h1>
           <div className="stat-num"></div>
         </section>
       </section>
