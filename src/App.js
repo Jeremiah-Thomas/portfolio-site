@@ -1,11 +1,12 @@
 import "./App.css";
-import Home from "./pages/Home";
+import MainSection from "./components/MainSection";
+import Header from "./components/Header";
 
-// parchment: #FCF5E5
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Header />
+      <MainSection />
     </div>
   );
 }

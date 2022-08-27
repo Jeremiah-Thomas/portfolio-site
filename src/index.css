@@ -1,9 +1,17 @@
-body {
-  background-color: #fcf5e5;
+html {
+  --red-theme: #d52217;
+  --gray-theme: #222320;
+  --light-theme: #c6bfb5;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Courgette", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
