@@ -1,6 +1,6 @@
 import Hero from "../../assets/hero.jpg";
 
-export default [
+const projectData = [
   {
     name: "Test",
     screenshot: Hero,
@@ -22,3 +22,5 @@ export default [
     tech: "T1, T2, and T3",
   },
 ];
+
+export default projectData;
