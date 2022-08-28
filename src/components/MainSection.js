@@ -28,6 +28,7 @@ const Tech = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin-inline: 10%;
 
   h1 {
     font-size: 3rem;
@@ -55,7 +56,7 @@ const Intro = styled.div`
   gap: 2rem;
 
   img {
-    max-width: 25%;
+    max-width: 40%;
   }
 
   div {
@@ -64,7 +65,19 @@ const Intro = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 50%;
+    max-width: 55%;
+  }
+
+  @media (max-width: 830px) {
+    flex-direction: column;
+
+    img {
+      max-width: 75%;
+    }
+
+    div {
+      max-width: 80%;
+    }
   }
 `;
 
@@ -77,7 +90,7 @@ const MainSection = () => {
           <h1>Hello There</h1>
           <p>
             I'm Jeremiah Thomas, a full stack web developer. I am currently
-            searching for a full time job and do freelance work.
+            searching for a full time job and do freelance work on the side.
           </p>
         </div>
       </Intro>

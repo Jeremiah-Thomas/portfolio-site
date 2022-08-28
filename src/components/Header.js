@@ -14,6 +14,10 @@ const Head = styled.header`
     margin: 0;
     padding: 1rem;
   }
+
+  @media (max-width: 830px) {
+    justify-content: center;
+  }
 `;
 
 const Header = () => {
