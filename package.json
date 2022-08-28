@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "heroku-postbuild": "node ./index.js",
+    "heroku-postbuild": "",
     "eject": "react-scripts eject",
     "dev": "nodemon ./index.js",
     "server": "node ./index.js,",
