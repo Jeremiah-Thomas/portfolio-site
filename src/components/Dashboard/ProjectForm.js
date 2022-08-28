@@ -9,6 +9,7 @@ const Form = styled.form`
   align-items: center;
   gap: 2vh;
   margin-top: 5vh;
+  width: 70vw;
   h1,
   h2 {
     color: var(--red-theme);
@@ -20,6 +21,7 @@ const Form = styled.form`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
     div {
       cursor: pointer;
       border: solid black 2px;
@@ -38,7 +40,8 @@ const Form = styled.form`
     background-color: var(--gray-theme);
     color: var(--light-theme);
     border-radius: 1rem;
-    width: 70ch;
+    width: 90%;
+
     padding: 0.5rem;
     text-align: center;
   }
@@ -46,7 +49,8 @@ const Form = styled.form`
   textarea {
     background-color: var(--gray-theme);
     color: var(--light-theme);
-    width: 70ch;
+    width: 90%;
+
     height: 5ch;
     text-align: center;
     border-radius: 1rem;
@@ -59,6 +63,7 @@ const Form = styled.form`
 
   input[type="submit"] {
     cursor: pointer;
+    max-width: 100%;
   }
 `;
 
