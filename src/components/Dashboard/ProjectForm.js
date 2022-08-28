@@ -78,7 +78,7 @@ const ProjectForm = (props) => {
 
     axios
       .post(
-        `${process.env.REACT_APP_BACKEND}/api/projects` || "/api/projects",
+        `${process.env.REACT_APP_BACKEND}api/projects` || "/api/projects",
         formData,
         {
           headers: {
