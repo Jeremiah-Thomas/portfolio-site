@@ -1,12 +1,17 @@
 import "./App.css";
-import MainSection from "./components/MainSection";
-import Header from "./components/Header";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <MainSection />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

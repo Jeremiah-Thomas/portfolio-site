@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Project from "./Project";
+import axios from "axios";
 
 const List = styled.div`
   display: flex;
@@ -11,14 +12,25 @@ const List = styled.div`
 `;
 
 const Projects = (props) => {
-  const { projects } = props;
+  const [projects, setProjects] = useState();
+
+  useEffect(() => {
+    axios.get("/api/projects").then((res) => {
+      setProjects(res.data);
+    });
+  }, []);
+
   return (
     <>
       <h1>Projects</h1>
       <List>
-        {projects.map((project) => {
-          return <Project project={project} />;
-        })}
+        {projects == null ? (
+          <p>Loading ...</p>
+        ) : (
+          projects.map((project) => {
+            return <Project project={project} key={project.id} />;
+          })
+        )}
       </List>
     </>
   );
