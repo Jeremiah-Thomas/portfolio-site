@@ -15,9 +15,11 @@ const Projects = (props) => {
   const [projects, setProjects] = useState();
 
   useEffect(() => {
-    axios.get("/api/projects").then((res) => {
-      setProjects(res.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_BACKEND}/api/projects` || "/api/projects")
+      .then((res) => {
+        setProjects(res.data);
+      });
   }, []);
 
   return (

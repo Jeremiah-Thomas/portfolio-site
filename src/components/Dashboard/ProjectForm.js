@@ -77,11 +77,15 @@ const ProjectForm = (props) => {
     formData.append("technologies_used", techUsed);
 
     axios
-      .post("/api/projects", formData, {
-        headers: {
-          "Content-type": "multipart/form-data",
-        },
-      })
+      .post(
+        `${process.env.REACT_APP_BACKEND}/api/projects` || "/api/projects",
+        formData,
+        {
+          headers: {
+            "Content-type": "multipart/form-data",
+          },
+        }
+      )
       .then((res) => {
         setImagePreview();
         setProjectName("");
