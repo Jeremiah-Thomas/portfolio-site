@@ -24,13 +24,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "heroku-postbuild": "node ./index.js",
     "eject": "react-scripts eject",
-    "dev": "nodemon /index.js",
-    "server": "node /index.js,",
+    "dev": "nodemon ./index.js",
+    "server": "node ./index.js,",
     "migrate": "npx knex migrate:latest",
     "rollback": "npx knex migrate:rollback"
   },
-  "proxy": "http://localhost:9000",
+  "proxy": "https://jeremiah-thomas-backend.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
