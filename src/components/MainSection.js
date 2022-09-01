@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Projects from "./Projects/Projects";
 import Hero from "../assets/hero.jpg";
-import projectData from "./Projects/projectData";
 
 const Main = styled.main`
   color: var(--light-theme);
@@ -94,7 +93,7 @@ const MainSection = () => {
           </p>
         </div>
       </Intro>
-      <Projects projects={projectData} />
+      <Projects />
       <Tech>
         <div>
           <h1>Technologies That I Know</h1>

@@ -32,7 +32,6 @@
     "migrate": "npx knex migrate:latest",
     "rollback": "npx knex migrate:rollback"
   },
-  "proxy": "https://jeremiah-thomas-backend.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
