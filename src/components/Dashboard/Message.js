@@ -15,7 +15,7 @@ const MessageBox = styled.div`
 `;
 
 const Message = (props) => {
-  return <MessageBox>{props.message}</MessageBox>;
+  return <MessageBox display={props.display}>{props.message}</MessageBox>;
 };
 
 export default Message;
