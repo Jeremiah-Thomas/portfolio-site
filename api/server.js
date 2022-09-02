@@ -11,7 +11,8 @@ const server = express();
 server.use(express.json());
 server.use(
   cors({
-    exposedHeaders: ["Authorization"],
+    credentials: true,
+    origin: true,
   })
 );
 
