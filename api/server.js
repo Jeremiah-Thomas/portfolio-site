@@ -9,7 +9,11 @@ const authRouter = require("./auth/router");
 const server = express();
 
 server.use(express.json());
-server.use(cors());
+server.use(
+  cors({
+    exposedHeaders: ["Authorization"],
+  })
+);
 
 server.use("/api/projects", projectsRouter);
 server.use("/api/auth", authRouter);
