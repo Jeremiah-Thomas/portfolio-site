@@ -37,8 +37,8 @@ const Form = styled.form`
   }
 
   input {
-    background-color: var(--gray-theme);
-    color: var(--light-theme);
+    background-color: var(--light-theme);
+    color: var(--gray-theme);
     border-radius: 1rem;
     width: 90%;
 
