@@ -39,7 +39,7 @@ const Dashboard = () => {
   const [message, setMessage] = useState("");
   return (
     <Main>
-      <Message message={message} />
+      <Message message={message} display={message ? "flex" : "none"} />
       <ProjectForm setMessage={setMessage} />
     </Main>
   );
