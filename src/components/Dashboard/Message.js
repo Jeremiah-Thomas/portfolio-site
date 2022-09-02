@@ -6,7 +6,7 @@ const MessageBox = styled.div`
   top: 0;
   width: 100%;
   height: 5vh;
-  display: flex;
+  display: ${(props) => props.display};
   justify-content: center;
   align-items: center;
   background-color: var(--light-theme);

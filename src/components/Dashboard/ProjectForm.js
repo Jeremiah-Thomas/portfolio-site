@@ -3,7 +3,7 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Form = styled.form`
-  display: ${(props) => props.display};
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
