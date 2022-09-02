@@ -9,12 +9,7 @@ const authRouter = require("./auth/router");
 const server = express();
 
 server.use(express.json());
-server.use(
-  cors({
-    credentials: true,
-    origin: true,
-  })
-);
+server.use(cors());
 
 server.use("/api/projects", projectsRouter);
 server.use("/api/auth", authRouter);

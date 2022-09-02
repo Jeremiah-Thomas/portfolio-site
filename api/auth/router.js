@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { getAdmin, createAdmin } = require("./model");
+const corsHeaders = require("./corsMiddleware");
 
 const router = express.Router();
 
@@ -15,7 +16,7 @@ const generateJwt = (admin) => {
   return jwt.sign(payload, process.env.JWT_SECRET, config);
 };
 
-router.post("/authenticate", async (req, res) => {
+router.post("/authenticate", corsHeaders, async (req, res) => {
   const token = req.headers.authorization;
   console.log(token);
   const admin = await getAdmin();
@@ -41,7 +42,7 @@ router.post("/authenticate", async (req, res) => {
   });
 });
 
-router.post("/register", (req, res) => {
+router.post("/register", corsHeaders, (req, res) => {
   const admin = req.body;
 
   const hash = bcrypt.hashSync(admin.password, 8);
@@ -53,7 +54,7 @@ router.post("/register", (req, res) => {
   });
 });
 
-router.post("/login", (req, res) => {
+router.post("/login", corsHeaders, (req, res) => {
   const { password } = req.body;
 
   getAdmin().then(([admin]) => {
