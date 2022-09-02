@@ -47,8 +47,8 @@ const Form = styled.form`
   }
 
   textarea {
-    background-color: var(--gray-theme);
-    color: var(--light-theme);
+    background-color: var(--light-theme);
+    color: var(--gray-theme);
     width: 90%;
 
     height: 5ch;
