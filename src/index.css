@@ -3,9 +3,11 @@ html {
   --gray-theme: #222320;
   --light-theme: #c6bfb5;
   margin: 0;
+  height: 100%;
 }
 
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: var(--gray-theme);

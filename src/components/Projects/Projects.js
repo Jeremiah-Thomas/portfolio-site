@@ -16,7 +16,7 @@ const Projects = (props) => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND}api/projects` || "/api/projects")
+      .get(`${process.env.REACT_APP_BACKEND}/api/projects` || "/api/projects")
       .then((res) => {
         setProjects(res.data);
       });
@@ -26,7 +26,7 @@ const Projects = (props) => {
     <>
       <h1>Projects</h1>
       <List>
-        {projects == null ? (
+        {projects == null || projects.length < 1 ? (
           <p>Loading ...</p>
         ) : (
           projects.map((project) => {
