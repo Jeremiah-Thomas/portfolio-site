@@ -105,6 +105,12 @@ const WorkOrderForm = (props) => {
       .then((res) => {
         props.setMessage(res.data.message);
       });
+
+    setClientName("");
+    setClientEmail("");
+    setSiteName("");
+    setAdditionalDetails("");
+    setDesignImage();
   };
 
   return (
