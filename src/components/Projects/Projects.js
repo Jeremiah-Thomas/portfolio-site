@@ -26,8 +26,10 @@ const Projects = (props) => {
     <>
       <h1>Projects</h1>
       <List>
-        {projects == null || projects.length < 1 ? (
+        {projects == null ? (
           <p>Loading ...</p>
+        ) : projects.length < 1 ? (
+          <p>No Projects</p>
         ) : (
           projects.map((project) => {
             return <Project project={project} key={project.id} />;
