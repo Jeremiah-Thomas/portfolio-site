@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 const Form = styled.form`
   display: flex;
@@ -66,7 +67,7 @@ const Form = styled.form`
   }
 `;
 
-const WorkOrderForm = () => {
+const WorkOrderForm = (props) => {
   const [designImage, setDesignImage] = useState();
   const [clientName, setClientName] = useState("");
   const [clientEmail, setClientEmail] = useState("");
@@ -88,8 +89,26 @@ const WorkOrderForm = () => {
     }
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+
+    formData.append("client_name", clientName);
+    formData.append("client_email", clientEmail);
+    formData.append("site_name", siteName);
+    formData.append("design_image", designImage);
+    formData.append("additional_details", additionalDetails);
+
+    axios
+      .post(`${process.env.REACT_APP_BACKEND}/api/work-order`, formData)
+      .then((res) => {
+        props.setMessage(res.data.message);
+      });
+  };
+
   return (
-    <Form>
+    <Form onSubmit={onSubmit}>
       <h1>Work Order Form</h1>
       <p>
         I will send a response email detailing pricing and any questions or
@@ -138,7 +157,6 @@ const WorkOrderForm = () => {
           type="file"
           accept="image/*"
           onChange={onChange}
-          required
         />
         <div>
           {!designImage ? (
