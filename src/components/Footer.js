@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Foot = styled.footer`
-  height: 10vh;
+  height: fit-content;
   max-width: 100%;
   background-color: var(--light-theme);
   position: realitve;

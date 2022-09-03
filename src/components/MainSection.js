@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Projects from "./Projects/Projects";
 import Hero from "../assets/hero.jpg";
@@ -54,6 +55,14 @@ const Intro = styled.div`
   margin-bottom: 7rem;
   gap: 2rem;
 
+  h1 {
+    font-size: 5rem;
+  }
+
+  p {
+    2rem;
+  }
+
   img {
     max-width: 40%;
   }
@@ -64,7 +73,36 @@ const Intro = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 55%;
+    max-width: 50%;
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      min-width: 100%;
+      button {
+        all: unset;
+        border-radius: 1rem;
+        background-color: var(--light-theme);
+        color: var(--red-theme);
+        width: 10rem;
+        padding: 1rem;
+        height: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--red-theme);
+          color: var(--light-theme);
+        }
+
+        @media (max-width: 830px) {
+          margin: 0;
+        }
+      }
+    }
   }
 
   @media (max-width: 830px) {
@@ -81,16 +119,26 @@ const Intro = styled.div`
 `;
 
 const MainSection = () => {
+  const navigate = useNavigate();
   return (
     <Main>
       <Intro>
         <img src={Hero} alt="FullStack Portrayal" />
         <div>
           <h1>Hello There</h1>
-          <p>
-            I'm Jeremiah Thomas, a full stack web developer. I am currently
-            searching for a full time job and do freelance work on the side.
-          </p>
+          <div className="cta">
+            <p>
+              I'm Jeremiah Thomas, a full stack web developer. I am currently
+              searching for a full time job and do freelance work on the side.
+            </p>
+            <button
+              onClick={() => {
+                navigate("/work-order", { replace: false });
+              }}
+            >
+              Need A Website?
+            </button>
+          </div>
         </div>
       </Intro>
       <Projects />
