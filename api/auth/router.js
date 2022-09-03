@@ -18,7 +18,6 @@ const generateJwt = (admin) => {
 
 router.post("/authenticate", corsHeaders, async (req, res) => {
   const token = req.headers.authorization;
-  console.log(token);
   const admin = await getAdmin();
   let register = false;
   if (admin.length > 0) {

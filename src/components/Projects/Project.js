@@ -10,6 +10,14 @@ const Card = styled.div`
   img {
     max-width: 80%;
   }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
 `;
 
 const Project = (props) => {
