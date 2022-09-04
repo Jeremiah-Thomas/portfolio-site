@@ -3,7 +3,7 @@ exports.up = function (knex) {
     .createTable("projects", (tbl) => {
       tbl.increments();
       tbl.text("project_name").unique().notNullable();
-      tbl.blob("project_screenshot").notNullable();
+      tbl.text("project_screenshot").notNullable();
       tbl.text("technologies_used").notNullable();
     })
     .createTable("admin", (tbl) => {

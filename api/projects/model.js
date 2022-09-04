@@ -5,9 +5,10 @@ const getProjects = () => {
 };
 
 const createProject = async (project) => {
-  const id = await db("projects").insert(project);
-  const [newProject] = await db("projects").where("id", id);
-  return newProject;
+  // const id = await db("projects").insert(project);
+  // const [newProject] = await db("projects").where("id", id);
+  // return newProject;
+  return db("projects").insert(project);
 };
 
 module.exports = {

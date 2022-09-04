@@ -21,7 +21,7 @@ router.post("/", upload.single("image"), (req, res) => {
   };
 
   createProject(newProject).then((newProject) => {
-    res.status(201).json(newProject);
+    res.status(201).json({ message: "Created" });
   });
 });
 
